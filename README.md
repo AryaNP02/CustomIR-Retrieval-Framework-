@@ -2,7 +2,7 @@
 
 ## Overview
 
-SelfIndex is a modular, configurable inverted index framework supporting multiple indexing strategies, storage backends, compression methods, and query processing optimizations. The system is designed for educational purposes and benchmarking against production systems like Elasticsearch.
+SelfIndex is a modular, configurable inverted index framework supporting multiple indexing strategies, storage backends, compression methods, and query processing optimizations.The system is designed to enable flexible custom index creation and efficient search functionality.The system currnently indexex   109,652+ documents of  new articles. 
 
 ---
 
