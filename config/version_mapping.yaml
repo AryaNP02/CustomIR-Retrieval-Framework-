@@ -1,0 +1,47 @@
+# Version String Reference
+# Format: SelfIndex-v1.xyziqQ
+# Where:
+#   x = Index Info Type
+#   y = Data Store Backend
+#   z = Compression Method
+#   i = Optimization
+#   q = Query Processing Strategy
+
+index_types:
+  1: "BOOLEAN"
+  2: "WORDCOUNT"
+  3: "TFIDF"
+
+storage_backends:
+  1: "CUSTOM_DISK"
+  2: "SQLITE"
+  3: "REDIS"
+
+compression_methods:
+  1: "NONE"
+  2: "VARBYTE_ENCODING"
+  3: "GZIP_COMPRESSION"
+
+optimizations:
+  "0": "NULL"
+  "sp": "SKIPPING"
+  "th": "THRESHOLDING"
+  "es": "EARLY_STOPPING"
+
+query_strategies:
+  "T": "TERM_AT_A_TIME"
+  "D": "DOCUMENT_AT_A_TIME"
+
+# Example configurations
+examples:
+  boolean_custom_none:
+    version: "SelfIndex-v1.1110T"
+    description: "Boolean index, Custom storage, No compression, No optimization, Term-at-a-time"
+  
+  tfidf_sqlite_skipping:
+    version: "SelfIndex-v1.321spT"
+    description: "TF-IDF index, SQLite storage, VarByte compression, Skipping optimization, Term-at-a-time"
+  
+  wordcount_redis_gzip:
+    version: "SelfIndex-v1.233esD"
+    description: "WordCount index, Redis storage, GZIP compression, Early stopping, Document-at-a-time"

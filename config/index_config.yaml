@@ -1,0 +1,64 @@
+# Index Configuration
+# Defines default parameters for index building and querying
+
+# Data directory settings
+data:
+  # Path to the dataset directory containing JSON and ZIP files
+  directory: "free-news-datasets/News_Datasets"
+  # Maximum number of documents to index (null = unlimited)
+  max_docs: 1e6
+  # File extensions to process
+  extensions:
+    - ".json"
+    - ".zip"
+
+# Index settings (affects version string)
+index:
+  # Index information type: BOOLEAN (1), WORDCOUNT (2), TFIDF (3)
+  type: "BOOLEAN"
+  
+  # Storage backend: CUSTOM (1), DB1_SQLITE (2), DB2_REDIS (3)
+  storage: "CUSTOM"
+  
+  # Compression method: NONE (1), CODE_VARBYTE (2), CLIB_GZIP (3)
+  compression: "NONE"
+  
+  # Query optimization: NULL (0), SKIPPING (sp), THRESHOLDING (th), EARLYSTOPPING (es)
+  optimization: "NULL"
+  
+  # Query processing strategy: TERM_AT_A_TIME (T), DOCUMENT_AT_A_TIME (D)
+  query_strategy: "TERM_AT_A_TIME"
+
+# Preprocessing settings
+preprocessing:
+  # Whether to use stemming
+  stemming_enabled: true
+  # Whether to remove stopwords
+  stopwords_enabled: true
+  # Minimum token length (after preprocessing)
+  min_token_length: 2
+
+# Query settings
+query:
+  # Default number of top-k results to return
+  default_top_k: 10
+  # Maximum number of results to return
+  max_results: 1000
+
+# Storage settings
+storage:
+  # Directory for storing indices
+  index_directory: "indices"
+  # Create directory if not exists
+  create_if_missing: true
+
+# Metrics collection
+metrics:
+  # Whether to collect metrics during operations
+  enabled: true
+  # Number of repetitions for latency measurement
+  latency_repetitions: 1
+  # Number of queries for throughput measurement
+  throughput_queries: 25
+  # Measurement duration in seconds
+  throughput_duration: 5
