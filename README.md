@@ -722,7 +722,7 @@ qp2 = builder2.get_query_processor()
 
 ---
 
-## References
+## NOTES 
 
 - **NLTK Porter Stemmer**: https://www.nltk.org/api/nltk.stem.porter.html
 - **Gap Encoding**: Introduction to Information Retrieval (Manning et al.)
