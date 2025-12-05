@@ -1,5 +1,5 @@
-# CustomIR-Retrieval-Framework
-
+  # CustomIR-Retrieval-Framework
+##  A MiniSearchDB: Optimized Text Search Engine
 ## Overview
 
 SelfIndex is a modular, configurable inverted index framework supporting multiple indexing strategies, storage backends, compression methods, and query processing optimizations.The system is designed to enable flexible custom index creation and efficient search functionality.The system currently indexes 109,652+ news articles.
